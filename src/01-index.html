@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 문서에 SVG를 넣는 방법들</title>
+    <style>
+      .svg {
+        width: 300px;
+        height: 300px;
+        background: url("images/cc.svg") no-repeat 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. img 태그를 사용하는 방법 -->
+    <img src="images/cc.svg" alt="" />
+
+    <!-- 2. css를 사용하는 방법 -->
+    <div class="svg"></div>
+
+    <!-- 3. inline으로 삽입하는 방법 -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <circle
+        cx="50"
+        cy="50"
+        r="43"
+        fill="none"
+        stroke="#000"
+        stroke-width="9"
+      />
+      <path
+        d="M50,42c-6-9-20-9,-25,0c-2,5-2,11,0,16c5,9,19,9,25,0l-6-3c-2,5-9,5-11,0c-1-1-1-9,0-10c2-5,9-4,11,0z"
+      />
+      <path
+        d="M78,42c-6-9-20-9,-25,0c-2,5-2,11,0,16c5,9,19,9,25,0l-6-3c-2,5-9,5-11,0c-1-1-1-9,0-10c2-5,9-4,11,0z"
+      />
+    </svg>
+
+    <!-- 4. object 태그를 사용하는 방법 -->
+    <object data="images/cc.svg" type="image/svg+xml"></object>
+  </body>
+</html>
